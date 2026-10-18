@@ -14,8 +14,8 @@ import java.util.List;
 @RequestMapping("/api/departments")
 public class DepartmentController {
 
+//    private DepartmentService departmentService;
     private DepartmentService departmentService;
-
     //Build create or Add department REST API
 
     @PostMapping
