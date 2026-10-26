@@ -47,7 +47,7 @@ public class DepartmentServiceImpl implements DepartmentService {
         Department department= departmentRepository.findById(departmentId)
                  .orElseThrow(() -> new ResourceNotFoundException("depart is not exist with given id"+departmentId));
 
-        department.setDepartmentname(updatedDepartment.getDepartmentname());
+        department.setDepartmentname(updatedDepartment.getDepartmentName());
         department.setDepartmentDescription(updatedDepartment.getDepartmentDescription());
 
        Department savedDepartment= departmentRepository.save(department);
