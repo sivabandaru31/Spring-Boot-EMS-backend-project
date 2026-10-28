@@ -10,18 +10,24 @@ public class EmployeeMapper {
                 employee.getId(),
                 employee.getFirstname(),
                 employee.getLastname(),
-                employee.getEmail()
+                employee.getEmail(),
+                employee.getDepartment().getId()
         );
     }
 
     //EmployeeDto entity to Employee
     public static Employee mapToEmployee(EmployeeDto employeeDto){
-        return new Employee(
-                employeeDto.getId(),
-                employeeDto.getFirstname(),
-                employeeDto.getLastname(),
-                employeeDto.getEmail()
-        );
+        Employee employee= new Employee();
+        employee.setId(employeeDto.getId());
+        employee.setFirstname(employeeDto.getFirstname());
+        employee.setLastname(employeeDto.getLastname());
+        employee.setEmail(employeeDto.getEmail());
+        return employee;
+
+//                employeeDto.getId(),
+//                employeeDto.getFirstname(),
+//                employeeDto.getLastname(),
+//                employeeDto.getEmail()
     }
 
 }
